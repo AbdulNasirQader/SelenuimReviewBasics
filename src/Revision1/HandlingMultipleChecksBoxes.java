@@ -1,4 +1,4 @@
-package Revision;
+package Revision1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,20 +8,20 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.List;
 
-public class HandlingLastTwoCheckBoxes {
+public class HandlingMultipleChecksBoxes {
     public static void main(String[] args) {
 
         ChromeOptions options=new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
-        WebDriver driver= new ChromeDriver(options);
+        WebDriver driver=new ChromeDriver(options);
 
         driver.get("https://itera-qa.azurewebsites.net/home/automation");
-        //driver.findElement(By.xpath("//input[@id='monday']")).click();
         List<WebElement> days =driver.findElements(By.xpath("//input[@type='checkbox' and contains(@id,'day')]"));
-        for(int i=5; i<=days.size(); i++)
-        {
+        for (WebElement day:days){
+            day.click();
+        }
+        for (int i = 0; i < days.size(); i++) {
             days.get(i).click();
         }
     }
-    }
-
+}

@@ -1,4 +1,4 @@
-package Revision;
+package Revision1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.nio.file.Watchable;
 import java.util.List;
 
 public class HandlingSelectiveCheckBoxes {
