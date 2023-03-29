@@ -23,7 +23,8 @@ public class HandlingDropdown3 {
 
         for (WebElement product:productType){
            String productName = product.getText();
-            if (productName.equalsIgnoreCase("Loans")){
+
+           if (productName.equalsIgnoreCase("Loans")){
                product.click();
                break;
            }
